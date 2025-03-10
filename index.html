@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>随机题目生成器</title>
+    <!-- 引入 Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- 引入 SweetAlert2 CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
+    />
+    <!-- 自定义提示框样式 -->
+    <style>
+      .swal2-height-auto {
+        height: 100vh !important;
+      }
+    </style>
+    <!-- 页面样式 -->
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div class="side-panel left-panel">
+      <h2>不熟题目</h2>
+      <ul id="unfamiliar-questions"></ul>
+    </div>
+    <div class="container">
+      <div id="remaining-questions">
+        剩余题目：<span id="remaining-count">0</span>
+      </div>
+      <i
+        id="auto-play-toggle"
+        class="fas fa-volume-up auto-play-toggle"
+        onclick="toggleAutoPlay()"
+      ></i>
+      <button class="clear-button" onclick="clearAllQuestions()">
+        清空所有题目
+      </button>
+      <div class="motivation">每天进步一点点，未来会感谢现在努力的自己！</div>
+      <h1>随机题目生成器</h1>
+      <div id="question-container">
+        <div id="question">点击获取一个随机题目</div>
+        <i id="repeat-icon" class="fas fa-play"></i>
+      </div>
+      <div class="buttons">
+        <button id="generate-button" onclick="generateQuestion()">
+          获取题目
+        </button>
+        <button id="add-to-memorized" onclick="addToMemorized()">
+          添加到背诵区
+        </button>
+        <button id="add-to-unfamiliar" onclick="addToUnfamiliar()">
+          添加到不熟区
+        </button>
+      </div>
+    </div>
+
+    <div class="side-panel right-panel">
+      <h2>已背诵题目</h2>
+      <ul id="memorized-questions"></ul>
+    </div>
+
+    <div class="add-question-form">
+      <input
+        type="text"
+        id="new-question-input"
+        autocomplete="off"
+        placeholder="输入新题目"
+      />
+      <button onclick="addNewQuestion()">添加题目</button>
+    </div>
+
+    <!-- 引入 SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
