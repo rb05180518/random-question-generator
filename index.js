@@ -10,6 +10,12 @@ const defaultQuestions = [
   "计算机组成原理中的存储系统？",
   "计算机组成原理中的中央处理器（CPU）？",
   "计算机组成原理中的指令系统？",
+    "什么是树结构？",
+    "What is tree structure？",
+    "对机器学习的认识？",
+    "What is your understanding of machine learning?",
+    "对计算机视觉的认识？",
+    "What is your understanding of computer vision?"
 ];
 
 // 统一调整所有提示框样式
